@@ -1,2 +1,2 @@
-<span style="color:blue"> ## Car Reantal System </span> 
+# Car Reantal System 
 The car rental system is a system that allows users to rent cars. 
