@@ -1,14 +1,9 @@
-import { Input } from "./shared/ui/Input";
+import { LoginComp } from "./components/Auth/Login";
 
 const App = () => {
 	return (
 		<>
-			<Input
-				label="hjkghjk"
-				placeholder=""
-				type="email"
-				error="this is required"
-			/>
+			<LoginComp />
 		</>
 	);
 };
