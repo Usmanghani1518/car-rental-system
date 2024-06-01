@@ -10,7 +10,7 @@ export const Input: FC<InputFieldProp> = (prop) => {
 	return (
 		<>
 			<label className="block font-semibold text-sm my-2">{label}</label>
-			<div className="relative w-80">
+			<div className="relative">
 				<input
 					type={showPassword ? "text" : type}
 					className={`border border-[#E2E8F0] rounded-lg h-10 w-full pl-3 pr-10 ${className}`}

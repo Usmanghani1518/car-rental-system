@@ -5,24 +5,34 @@ import gLogo from "@/assets/google-icon.svg";
 import appleLogo from "@/assets/apple-icon.svg";
 import fbLogo from "@/assets/fb-icon.svg";
 import { AuthImg } from "@/shared/ui/AuthImg";
-import { Link } from "react-router-dom";
 
-export const LogIn = () => {
+export const SignIn = () => {
 	return (
 		<>
-			<div className="lg:flex  min-h-screen">
+			<div className="lg:flex min-h-screen">
 				<AuthImg />
-				<div className="lg:w-1/2 flex flex-col items-center justify-center my-10">
-					<div className=" flex items-center justify-center ">
+
+				<div className=" lg:w-1/2 flex flex-col items-center justify-center my-10">
+					<div className=" flex justify-center  ">
 						<img src={logoDark} className="" alt="" />
 					</div>
 					<h1 className="text-center text-2xl font-bold mt-4">
-						Login to your Account
+						Sign In to your Account
 					</h1>
-					<p className="text-center">Welcome back! please enter your detail</p>
-					<form
-						action=""
-						className="mt-4 lg:w-[75%] max-lg:w-[60%] max-sm:w-[80%]">
+					<p className="text-center">Welcome! please enter your detail</p>
+					<form className="mt-4 lg:w-[75%] max-lg:w-[60%] max-sm:w-[80%]">
+						<Input
+							label="Name"
+							placeholder="Enter your Full Name"
+							type="text"
+							clasName=""
+						/>
+						<Input
+							label="Phone"
+							placeholder="Enter your phone number"
+							type="text"
+							clasName=""
+						/>
 						<Input
 							label="Email"
 							placeholder="Enter your email"
@@ -35,15 +45,6 @@ export const LogIn = () => {
 							type="password"
 							clasName=""
 						/>
-						<div className="flex justify-between items-center my-2">
-							<div className="">
-								<input type="checkbox" className="size-4 mt-2" />
-								<span className="text-sm ml-3  item-center">Remember me</span>
-							</div>
-							<div className="text-[#3563E9] font-semibold">
-								Forgot Password?
-							</div>
-						</div>
 						<Button
 							label="Sign In"
 							loading
@@ -52,12 +53,6 @@ export const LogIn = () => {
 							color="blue"
 							className="bg-[#3563E9]"
 						/>
-						Dont have an Account?{" "}
-						<Link
-							className="font-semibold text-blue-500 hover:underline"
-							to="/Sign-up">
-							Sign Up
-						</Link>
 						<Button
 							label="Sign in with Google"
 							loading

@@ -1,9 +1,10 @@
-import { LoginComp } from "./components/Auth/Login";
-
+import { Outlet } from "react-router-dom";
 const App = () => {
 	return (
 		<>
-			<LoginComp />
+			{/* <div className="text-2xl text-red-600">header</div> */}
+			<Outlet />
+			{/* <div className="text-2xl text-red-600">footer</div> */}
 		</>
 	);
 };
