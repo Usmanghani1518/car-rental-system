@@ -51,13 +51,17 @@ export const LogIn = () => {
 							font="semibold"
 							color="blue"
 							className="bg-[#3563E9]"
+							type="submit"
 						/>
-						Dont have an Account?{" "}
-						<Link
-							className="font-semibold text-blue-500 hover:underline"
-							to="/Sign-up">
-							Sign Up
-						</Link>
+						<p className="text-center">
+							Do not have an Account?
+							<Link
+								className="font-semibold text-blue-500 hover:underline"
+								to="/Sign-up">
+								Sign Up
+							</Link>
+						</p>
+						<p className="text-center text-blue-500">OR</p>
 						<Button
 							label="Sign in with Google"
 							loading
@@ -66,6 +70,7 @@ export const LogIn = () => {
 							color=""
 							font="normal"
 							icon={gLogo}
+							type="button"
 						/>
 						<Button
 							label="Sign in with Facebook"
@@ -75,6 +80,7 @@ export const LogIn = () => {
 							className="mt-2 !text-black font-normal bg-[#f3f4f6]"
 							color=""
 							icon={fbLogo}
+							type="button"
 						/>
 						<Button
 							label="Sign in with Apple "
@@ -84,6 +90,7 @@ export const LogIn = () => {
 							className="mt-2 !text-black font-normal bg-[#f3f4f6]"
 							color=""
 							icon={appleLogo}
+							type="button"
 						/>
 					</form>
 				</div>

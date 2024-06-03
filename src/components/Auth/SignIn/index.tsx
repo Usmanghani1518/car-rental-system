@@ -5,6 +5,7 @@ import gLogo from "@/assets/google-icon.svg";
 import appleLogo from "@/assets/apple-icon.svg";
 import fbLogo from "@/assets/fb-icon.svg";
 import { AuthImg } from "@/shared/ui/AuthImg";
+import { Link } from "react-router-dom";
 
 export const SignIn = () => {
 	return (
@@ -52,7 +53,18 @@ export const SignIn = () => {
 							font="semibold"
 							color="blue"
 							className="bg-[#3563E9]"
+							type="submit"
 						/>
+						<p className="text-center">
+							Already have an Account?
+							<Link
+								className="font-semibold text-blue-500 hover:underline"
+								to="/login">
+								Login
+							</Link>
+						</p>
+
+						<p className="text-center text-blue-500 my-2">OR</p>
 						<Button
 							label="Sign in with Google"
 							loading
@@ -61,6 +73,7 @@ export const SignIn = () => {
 							color=""
 							font="normal"
 							icon={gLogo}
+							type="button"
 						/>
 						<Button
 							label="Sign in with Facebook"
@@ -70,6 +83,7 @@ export const SignIn = () => {
 							className="mt-2 !text-black font-normal bg-[#f3f4f6]"
 							color=""
 							icon={fbLogo}
+							type="button"
 						/>
 						<Button
 							label="Sign in with Apple "
@@ -79,6 +93,7 @@ export const SignIn = () => {
 							className="mt-2 !text-black font-normal bg-[#f3f4f6]"
 							color=""
 							icon={appleLogo}
+							type="button"
 						/>
 					</form>
 				</div>

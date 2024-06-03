@@ -17,5 +17,7 @@ export interface ButtonProp extends React.ButtonHTMLAttributes<HTMLButtonElement
     className?: string,
     loading: boolean,
     color: string,
-    font: string
+    font: string,
+    type: "submit" | "reset" | "button",
+    onClick?: (e: any) => void
 }
