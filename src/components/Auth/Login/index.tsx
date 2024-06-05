@@ -8,6 +8,9 @@ import { AuthImg } from "@/shared/ui/AuthImg";
 import { Link } from "react-router-dom";
 
 export const LogIn = () => {
+	const submitForm = (e: { preventDefault: () => void }) => {
+		e.preventDefault();
+	};
 	return (
 		<>
 			<div className="lg:flex  min-h-screen">
@@ -22,6 +25,7 @@ export const LogIn = () => {
 					<p className="text-center">Welcome back! please enter your detail</p>
 					<form
 						action=""
+						onSubmit={submitForm}
 						className="mt-4 lg:w-[75%] max-lg:w-[60%] max-sm:w-[80%]">
 						<Input
 							label="Email"
@@ -40,12 +44,14 @@ export const LogIn = () => {
 								<input type="checkbox" className="size-4 mt-2" />
 								<span className="text-sm ml-3  item-center">Remember me</span>
 							</div>
-							<div className="text-[#3563E9] font-semibold">
+							<Link
+								to="/forgot"
+								className="text-[#3563E9] font-semibold hover:underline">
 								Forgot Password?
-							</div>
+							</Link>
 						</div>
 						<Button
-							label="Sign In"
+							label="Login"
 							loading
 							width=""
 							font="semibold"

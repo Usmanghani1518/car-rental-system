@@ -6,8 +6,7 @@ import {
 import App from "@/App";
 import SignUp from "@/pages/SignUp";
 import Login from "@/pages/Login";
-import { ForgotPassword } from "@/components/Auth/ForgotPassword";
-import { Otp } from "@/components/Auth/Otp";
+import { ForgotPassword } from "./components/Auth/ForgotPassword";
 
 export const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -15,7 +14,6 @@ export const router = createBrowserRouter(
 			<Route path="sign-up" element={<SignUp />} />
 			<Route path="login" element={<Login />} />
 			<Route path="forgot" element={<ForgotPassword />} />
-			<Route path="otp" element={<Otp />} />
 		</Route>
 	)
 );
