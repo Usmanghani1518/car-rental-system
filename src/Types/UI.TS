@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface InputFieldProp extends React.InputHTMLAttributes<InputFieldProp> {
     label: string,
     type: string,
