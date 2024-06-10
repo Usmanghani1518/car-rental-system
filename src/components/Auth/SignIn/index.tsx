@@ -6,58 +6,37 @@ import appleLogo from "@/assets/apple-icon.svg";
 import fbLogo from "@/assets/fb-icon.svg";
 import { AuthImg } from "@/shared/ui/AuthImg";
 import { Link } from "react-router-dom";
-import { Schema, string, number, object, InferType } from "yup";
-import { useState } from "react";
+// import { string, number, object, InferType } from "yup";
+// import { useState } from "react";
 
 export const SignIn = () => {
-	type User = InferType<typeof formSchema>;
-	const [formData, setFormData] = useState<User>({
-		name: "",
-		phone: number,
-		email: "",
-		password: "",
-	});
-	const [error, setError] = useState({
-		name: "",
-		phone: "",
-		email: "",
-		password: "",
-	});
-	const formSchema = object({
-		name: string().required("name is required").min(5, "name min 5"),
-		phone: number()
-			.required("phone number is required")
-			.positive("Invalid phone number")
-			.integer("Invalid phone number"),
-		email: string().required("email is required").email("invalid email format"),
-		password: string()
-			.required("password is required")
-			.min(6, "password min 6 char long")
-			.max(9, "password max 9 char long")
-			.matches(
-				/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-				"password is weak"
-			),
-	});
-	const validateForm = async () => {
-		try {
-			await formSchema.validate(formData, { abortEarly: false });
-			setError({ email: "", name: "", password: "", phone: "" });
-			return true;
-		} catch (validationErrors) {
-			const formattedErrors: Partial<User> = {};
-			validationErrors.inner.forEach((error) => {
-				if (error.path) {
-					formattedErrors[error.path] = error.message;
-				}
-			});
-			setError(formattedErrors);
-			return false;
-		}
-	};
+	// type User = InferType<typeof formSchema>;
+
+	// const [error, setError] = useState({
+	// 	name: "",
+	// 	phone: "",
+	// 	email: "",
+	// 	password: "",
+	// });
+	// const formSchema = object({
+	// 	name: string().required("name is required").min(5, "name min 5"),
+	// 	phone: number()
+	// 		.required("phone number is required")
+	// 		.positive("Invalid phone number")
+	// 		.integer("Invalid phone number"),
+	// 	email: string().required("email is required").email("invalid email format"),
+	// 	password: string()
+	// 		.required("password is required")
+	// 		.min(6, "password min 6 char long")
+	// 		.max(9, "password max 9 char long")
+	// 		.matches(
+	// 			/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+	// 			"password is weak"
+	// 		),
+	// });
+
 	const submitForm = (e: { preventDefault: () => void }) => {
 		e.preventDefault();
-		console.log("$$$$$$$$$$$$$$$$$$$", validateForm());
 	};
 	return (
 		<>
@@ -79,25 +58,25 @@ export const SignIn = () => {
 							label="Name"
 							placeholder="Enter your Full Name"
 							type="text"
-							error={error.name && error.name}
+							// error={error.name && error.name}
 						/>
 						<Input
 							label="Phone"
 							placeholder="Enter your phone number"
 							type="number"
-							error={error.phone && error.phone}
+							// // // error={error.phone && error.phone}
 						/>
 						<Input
 							label="Email"
 							placeholder="Enter your email"
 							type="text"
-							error={error.email && error.email}
+							// // // error={error.email && error.email}
 						/>
 						<Input
 							label="Password"
 							placeholder="Enter your password"
 							type="password"
-							error={error.password && error.password}
+							// // // error={error.password && error.password}
 						/>
 						<Button
 							label="Sign In"
