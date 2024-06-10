@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { InputFieldProp } from "@/Types/ui.ts";
+import { InputFieldProp } from "@/Types/ui";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 export const Input: FC<InputFieldProp> = (prop) => {
