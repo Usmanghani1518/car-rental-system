@@ -1,4 +1,15 @@
-import { ButtonProp } from "@/types/ui";
+interface ButtonProp extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+	label: string;
+	icon?: string;
+	width: string;
+	disabled?: boolean;
+	className?: string;
+	loading: boolean;
+	color: string;
+	font: string;
+	type: "submit" | "reset" | "button";
+	onClick?: (e: any) => void;
+}
 export const Button = ({
 	label,
 	color = "bg-[#3563E9]",

@@ -1,6 +1,14 @@
 import { FC, useState } from "react";
-import { InputFieldProp } from "@/types/ui";
+
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+interface InputFieldProp extends React.InputHTMLAttributes<InputFieldProp> {
+	label: string;
+	type: string;
+	placeholder: string;
+	required?: boolean;
+	error?: string;
+	clasName?: string;
+}
 
 export const Input: FC<InputFieldProp> = (prop) => {
 	const [showPassword, setShowPassword] = useState<boolean>(false);
