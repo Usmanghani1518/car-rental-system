@@ -11,7 +11,7 @@ import { ForgotPassword } from "./components/Auth/ForgotPassword";
 export const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<App />}>
-			<Route path="sign-up" element={<SignUp />} />
+			<Route path="" element={<SignUp />} />
 			<Route path="login" element={<Login />} />
 			<Route path="forgot" element={<ForgotPassword />} />
 		</Route>
