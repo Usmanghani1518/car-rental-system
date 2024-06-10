@@ -1,6 +1,6 @@
 import logoDark from "@/assets/Logo-dark.png";
-import { Input } from "@/shared/ui/Input";
-import { Button } from "@/shared/ui/Button";
+import { Input } from "@/shared/ui/Input/index.tsx";
+import { Button } from "@/shared/ui/Button/index.tsx";
 import gLogo from "@/assets/google-icon.svg";
 import appleLogo from "@/assets/apple-icon.svg";
 import fbLogo from "@/assets/fb-icon.svg";

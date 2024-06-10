@@ -1,6 +1,6 @@
 import logoDark from "@/assets/Logo-dark.png";
-import { Input } from "@/shared/ui/Input";
-import { Button } from "@/shared/ui/Button";
+import { Input } from "@/shared/ui/Input/index.tsx";
+import { Button } from "@/shared/ui/Button/index.tsx";
 import { AuthImg } from "@/shared/ui/AuthImg";
 import { useState } from "react";
 import { Otp } from "@/components/Auth/Otp";
